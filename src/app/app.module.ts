@@ -5,10 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BooksService} from '../books.service';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { ShowbooksComponent } from './showbooks/showbooks.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent, HelloComponent, ShowbooksComponent ],
   providers:    [ BooksService ],
   bootstrap:    [ AppComponent ]
 })

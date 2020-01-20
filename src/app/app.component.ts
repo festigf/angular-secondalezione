@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BooksService } from '../books.service';
+import { Book } from '../book';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -7,6 +8,23 @@ import { BooksService } from '../books.service';
 })
 export class AppComponent  {
   name = 'Angular';
+  //books:Book[]=[]; //{'nome':"rr"}
+  constructor(private booksService: BooksService){
+    
+  /*this.booksService.getBooks().subscribe( (books:Book[]) => {
+    console.log('2 sono nel subscribe')
+    this.books=books;
+    console.log(this.books[0]);
+    });*/
+    console.log('1 sono nel costruttore')
+    console.log(this.booksService.books)
 
-  
+  }
+  onClick(){
+    this.booksService.getBooks().subscribe( (books:Book[]) => {
+    console.log('2 sono nel subscribe')
+    this.booksService.books=books;
+    console.log(this.booksService.books[0]);
+    });
+  }
 }
