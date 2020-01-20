@@ -14,7 +14,9 @@ export class ShowbooksComponent implements OnInit {
   ngOnInit() {
   }
   onDelete(pos){
-    this.booksService.books.splice(pos,1);
-  console.log(this.booksService.books[0]);
+    //this.booksService.books.splice(pos,1);
+    this.booksService.delBook(pos);
+
+    console.log(this.booksService.books[0]);
   }
 }

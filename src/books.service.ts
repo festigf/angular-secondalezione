@@ -12,4 +12,8 @@ export class BooksService {
   getBooks(){
     return this.http.get('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
   }
+  
+  delBook(pos){
+    this.books.splice(pos,1);
+  }
 }
