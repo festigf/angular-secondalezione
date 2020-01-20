@@ -1,6 +1,6 @@
-<p>
-showbooks works!
+<p *ngIf="booksService.books.length >0">
+Elenco libri!
 </p>
-<div *ngFor="let book of booksService.books">
-  {{book.title}}
+<div *ngFor="let book of booksService.books; let pos=index">
+   <button (click)="onDelete(pos)">del</button> {{pos}} {{book.title}}
 </div>
