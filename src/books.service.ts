@@ -16,10 +16,10 @@ export class BooksService {
 
 //header = header.set('Authorization', ('Token ' + auth));
 //header = header.set('Accept'," text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
-//header.append("Content-Type", "application/json");
-//header.append('Access-Control-Allow-Headers', 'Content-Type');
-//header.append('Access-Control-Allow-Methods', 'GET');
-//header.append('Access-Control-Allow-Origin', '*');
+header.append("Content-Type", "application/json");
+header.append('Access-Control-Allow-Headers', 'Content-Type');
+header.append('Access-Control-Allow-Methods', 'GET');
+header.append('Access-Control-Allow-Origin', '*');
 /*{
       
       headers: header
