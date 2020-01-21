@@ -27,8 +27,7 @@ export class BooksService {
 
     } */
     return this.http
-    .get('https://festigf.pythonanywhere.com/books',
-    )
+    .get('https://festigf.pythonanywhere.com/books',{headers: header})
     .pipe(catchError(err => {
       console.log(err)
       return throwError(err);

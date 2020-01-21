@@ -20,7 +20,7 @@ export class AppComponent  {
     console.log(this.booksService.books)
 
   }
-  onClick(){
+  onClick1(){
     this.booksService.getBooks().subscribe( (books:Book[]) => {
     console.log('2 sono nel subscribe')
     this.booksService.books=books;
@@ -28,4 +28,13 @@ export class AppComponent  {
     
     },error => console.log(error));
   }
+  onClick(){
+    this.booksService.getBooks().subscribe( (books) => {
+    console.log('2 sono nel subscribe')
+    //this.booksService.books=books;
+    console.log(this.booksService.books[0])
+    
+    },error => console.log(error));
+  }
+
 }
