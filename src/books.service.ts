@@ -17,9 +17,17 @@ export class BooksService {
 //header = header.set('Authorization', ('Token ' + auth));
 //header = header.set('Accept'," text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
 //header = header.append("Content-Type", "text/plain; charset=utf-8");
-
+header.append('Access-Control-Allow-Headers', 'Content-Type');
+header.append('Access-Control-Allow-Methods', 'GET');
+header.append('Access-Control-Allow-Origin', '*');
     return this.http
-    .get('http://festigf.pythonanywhere.com/getbook/1',{ headers: header })
+    .get('http://festigf.pythonanywhere.com/books',
+    {
+      
+      headers: header
+      
+
+    })
     .pipe(catchError(err => {
       console.log(err)
       return throwError(err);
