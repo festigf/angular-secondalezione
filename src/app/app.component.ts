@@ -24,7 +24,8 @@ export class AppComponent  {
     this.booksService.getBooks().subscribe( (books:Book[]) => {
     console.log('2 sono nel subscribe')
     this.booksService.books=books;
-    console.log(this.booksService.books[0]);
-    });
+    console.log(this.booksService.books[0])
+    
+    },error => console.log(error));
   }
 }

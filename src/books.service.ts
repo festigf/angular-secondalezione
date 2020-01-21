@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import {throwError} from 'rxjs';
 import { Book } from './book';
 @Injectable()
 export class BooksService {
@@ -13,9 +15,15 @@ export class BooksService {
     let header: HttpHeaders = new HttpHeaders();
 
 //header = header.set('Authorization', ('Token ' + auth));
+header = header.set('Accept'," text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+header = header.append("Content-Type", "text/plain; charset=utf-8");
 
-header = header.append("Content-Type", "application/json");
-    return this.http.get('https://festigf.pythonanywhere.com/books',{ headers: header });
+    return this.http
+    .get('http://festigf.pythonanywhere.com/getbook/1',{ headers: header })
+    .pipe(catchError(err => {
+      console.log(err)
+      return throwError(err);
+    }));
     
     //('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
   }
