@@ -10,7 +10,9 @@ export class BooksService {
   }
 
   getBooks(){
-    return this.http.get('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
+    return this.http.get('https://festigf.pythonanywhere.com/books');
+    
+    //('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
   }
   
   delBook(pos){
