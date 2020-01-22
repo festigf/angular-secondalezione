@@ -37,7 +37,7 @@ header.append('Pragma', 'no-cache');
 header.append('Expires', '0');
 header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
-header.append('Access-Control-Allow-Methods', '*');
+header.append('Access-Control-Allow-Methods', 'GET');
 header.append('Access-Control-Allow-Origin', '*');
 //header.append('withCredentials', 'true');
 
