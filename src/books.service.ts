@@ -32,14 +32,14 @@ const httpOptions = {
 
 header = header.set('Authorization', 'Basic ' + btoa('festigf:AltaFormazione2020'));
 //header = header.set('authorization', 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
-/*header.append("cache-control", "no-cache, no-store, must-revalidate, post-check=0, pre-check=0");
+header.append("cache-control", "no-cache, no-store, must-revalidate, post-check=0, pre-check=0");
 header.append('Pragma', 'no-cache');
 header.append('Expires', '0');
 header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
 header.append('Access-Control-Allow-Methods', '*');
-header.append('Access-Control-Allow-Origin', '*');
-*/
+header.append('Access-Control-Allow-Origin', 'https://angular-secondalezione.stackblitz.io');
+
 //header.append('withCredentials', 'true');
 
 /*{headers: header} */
