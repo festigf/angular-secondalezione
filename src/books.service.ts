@@ -25,10 +25,10 @@ console.log(btoa('festigf:AltaFormazione'));
 header = header.set('Authorization', 'Basic ' + btoa('festigf:AltaFormazione2020'));
 //header = header.set('authorization', 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 header.append("cache-control", "no-cache");
-header.append("Content-Type", "application/json");
+//header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
-header.append('Access-Control-Allow-Methods', 'GET');
-header.append('Access-Control-Allow-Origin', 'https://festigf.pythonanywhere.com');
+//header.append('Access-Control-Allow-Methods', 'GET');
+header.append('Access-Control-Allow-Origin', '*');
 
 /*{headers: header} */
     return this.http
