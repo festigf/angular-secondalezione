@@ -33,10 +33,10 @@ header.append('Access-Control-Allow-Origin', '*');
 /*{headers: header} */
     return this.http
     .get('https://festigf.pythonanywhere.com/books',{headers: header})
-    .pipe(catchError(err => {
+   /* .pipe(catchError(err => {
       console.log(err)
       return throwError(err);
-    }));
+    }));*/
     
     //('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
   }

@@ -34,7 +34,9 @@ export class AppComponent  {
     this.booksService.books=books;
     console.log(this.booksService.books[0])
     
-    },error => console.log(error));
+    }
+    //,error => console.log(error)
+    );
   }
 
 }
