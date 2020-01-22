@@ -12,14 +12,22 @@ export class BooksService {
   }
 
   getBooks(){
-    let header: HttpHeaders = new HttpHeaders();
 
-header = header.set('Authorization', ('Token ' + 'ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA='));
+    const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'Basic ' + btoa('festigf:AltaFormazione')
+  })
+};
+  //  let header: HttpHeaders = new HttpHeaders();
 
-header.append("Content-Type", "application/json");
+//header = header.set('Authorization', ('Basic ' + 'ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA='));
+
+/*header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
 header.append('Access-Control-Allow-Methods', 'GET');
 header.append('Access-Control-Allow-Origin', '*');
+*/
 /*{
       
       headers: header
@@ -27,7 +35,7 @@ header.append('Access-Control-Allow-Origin', '*');
 
     } */
     return this.http
-    .get('https://festigf.pythonanywhere.com/books',{headers: header})
+    .get('https://festigf.pythonanywhere.com/books',httpOptions)
     .pipe(catchError(err => {
       console.log(err)
       return throwError(err);
