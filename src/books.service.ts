@@ -20,6 +20,14 @@ export class BooksService {
   })
 };*/
 console.log(btoa('festigf:AltaFormazione'));
+const httpOptions = {
+ headers: new HttpHeaders({
+  'Authorization': 'Basic ' + btoa('festigf:AltaFormazione2020')
+ }),
+ withCredentials: true
+};    
+    
+    
     let header: HttpHeaders = new HttpHeaders();
 
 header = header.set('Authorization', 'Basic ' + btoa('festigf:AltaFormazione2020'));
@@ -33,7 +41,7 @@ header.append('withCredentials', 'true');
 
 /*{headers: header} */
     return this.http
-    .get('https://festigf.pythonanywhere.com/books',{headers: header})
+    .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
    /* .pipe(catchError(err => {
       console.log(err)
       return throwError(err);
