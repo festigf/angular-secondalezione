@@ -38,7 +38,7 @@ header.append('Expires', '0');
 header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
 header.append('Access-Control-Allow-Methods', '*');
-header.append('Access-Control-Allow-Origin', 'https://angular-secondalezione.stackblitz.io');
+header.append('Access-Control-Allow-Origin','*' );// 'https://angular-secondalezione.stackblitz.io');
 
 //header.append('withCredentials', 'true');
 
