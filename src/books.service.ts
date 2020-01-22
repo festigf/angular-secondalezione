@@ -28,7 +28,7 @@ header.append("cache-control", "no-cache");
 header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
 header.append('Access-Control-Allow-Methods', 'GET');
-header.append('Access-Control-Allow-Origin', '*');
+header.append('Access-Control-Allow-Origin', 'https://festigf.pythonanywhere.com');
 
 /*{headers: header} */
     return this.http
