@@ -31,7 +31,7 @@ export class AppComponent  {
   onClick(){
     this.booksService.getBooks().subscribe( (books) => {
     console.log('2 sono nel subscribe')
-    //this.booksService.books=books;
+    this.booksService.books=books;
     console.log(this.booksService.books[0])
     
     },error => console.log(error));
