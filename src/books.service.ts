@@ -14,8 +14,8 @@ export class BooksService {
   getBooks(){
     let header: HttpHeaders = new HttpHeaders();
 
-//header = header.set('Authorization', ('Token ' + auth));
-//header = header.set('Accept'," text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+header = header.set('Authorization', ('Token ' + 'ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA='));
+
 header.append("Content-Type", "application/json");
 header.append('Access-Control-Allow-Headers', 'Content-Type');
 header.append('Access-Control-Allow-Methods', 'GET');
