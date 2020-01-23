@@ -20,20 +20,21 @@ export class BooksService {
   })
 };*/
 console.log(btoa('festigf:AltaFormazione'));
-/*
+
 const httpOptions = {
  headers: new HttpHeaders({
    'Access-Control-Allow-Headers': 'Content-Type',
   'Authorization': 'Basic ' + btoa('festigf:AltaFormazione2020'),
   'Access-Control-Allow-Credentials': 'true',
+  'Access-Control-Allow-Origin':'http://localhost:4200' 
  }),
  withCredentials: true
 };    
-*/
-const httpOptions = {
+
+/*const httpOptions = {
  headers: new HttpHeaders(),
  withCredentials: true
-}; 
+};*/ 
     
     //'Basic ' + btoa('festigf:AltaFormazione2020')
     let header: HttpHeaders = new HttpHeaders();
