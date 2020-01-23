@@ -49,12 +49,12 @@ header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 
 /*{headers: header} */
     return this.http
-    .options('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
+    .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
     .pipe(catchError(err => {
       console.log(err);
-      return this.http
-        .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
-      //return throwError(err);
+      //return this.http
+        //.get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
+      return throwError(err);
     }));
     
     //('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
