@@ -30,7 +30,7 @@ const httpOptions = {
     
     let header: HttpHeaders = new HttpHeaders();
 
-header = header.set('Authorization', 'Basic ' + btoa('festigf:AltaFormazione2020'));
+header.append('Authorization', 'Basic ' + btoa('festigf:AltaFormazione2020'));
 //header = header.set('authorization', 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 header.append("cache-control", "no-cache, no-store, must-revalidate, post-check=0, pre-check=0");
 header.append('Pragma', 'no-cache');
@@ -49,13 +49,13 @@ header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 
 /*{headers: header} */
     return this.http
-    .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
+    .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true});/*
     .pipe(catchError(err => {
       console.log(err);
       //return this.http
         //.get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
       return throwError(err);
-    }));
+    }));*/
     
     //('https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json');
   }
