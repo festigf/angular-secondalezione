@@ -22,12 +22,12 @@ export class BooksService {
 console.log(btoa('festigf:AltaFormazione'));
 const httpOptions = {
  headers: new HttpHeaders({
-  'Authorization': 'Basic ' + btoa('festigf:AltaFormazione2020')
+  'Authorization': 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA='
  }),
  withCredentials: true
 };    
     
-    
+    //'Basic ' + btoa('festigf:AltaFormazione2020')
     let header: HttpHeaders = new HttpHeaders();
 
 header.append('Authorization', 'Basic ' + btoa('festigf:AltaFormazione2020'));
