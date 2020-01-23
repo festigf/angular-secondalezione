@@ -22,7 +22,9 @@ export class BooksService {
 console.log(btoa('festigf:AltaFormazione'));
 const httpOptions = {
  headers: new HttpHeaders({
-  'Authorization': 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA='
+   'Access-Control-Allow-Headers': 'Content-Type',
+  'Authorization': 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=',
+  'Access-Control-Allow-Credentials': 'true',
  }),
  withCredentials: true
 };    
@@ -50,7 +52,7 @@ header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 /*{headers: header} 
 {headers: header, withCredentials: true}*/
     return this.http
-    .get('https://festigf.pythonanywhere.com/api/books',httpOptions);/*
+    .get('//festigf.pythonanywhere.com/api/books',httpOptions);/*
     .pipe(catchError(err => {
       console.log(err);
       //return this.http
