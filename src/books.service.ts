@@ -53,7 +53,7 @@ header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
     .pipe(catchError(err => {
       console.log(err);
       return this.http
-        .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
+        .options('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
       //return throwError(err);
     }));
     
