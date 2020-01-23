@@ -40,14 +40,14 @@ header.append('Access-Control-Allow-Headers', 'Content-Type');
 header.append('Access-Control-Allow-Methods', '*');
 header.append('Access-Control-Allow-Origin','http://localhost:4200' );
 
-
+let  corsurlr = "https://cors-anywhere.herokuapp.com/";
 // 'https://angular-secondalezione.stackblitz.io');
 
 //header.append('withCredentials', 'true');
 
 /*{headers: header} */
     return this.http
-    .get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
+    .get(corsurlr+'https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})
     .pipe(catchError(err => {
       console.log(err)
       return throwError(err);
