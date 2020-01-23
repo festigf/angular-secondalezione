@@ -23,7 +23,7 @@ console.log(btoa('festigf:AltaFormazione'));
 const httpOptions = {
  headers: new HttpHeaders({
    'Access-Control-Allow-Headers': 'Content-Type',
-  'Authorization': 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=',
+  'Authorization': 'Basic ' + btoa('festigf:AltaFormazione2020'),
   'Access-Control-Allow-Credentials': 'true',
  }),
  withCredentials: true
