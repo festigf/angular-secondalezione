@@ -41,6 +41,8 @@ header.append('Access-Control-Allow-Methods', '*');
 header.append('Access-Control-Allow-Origin','http://localhost:4200' );
 header.append('Access-Control-Allow-Credentials', 'false');
 let  corsurlr = "https://cors-anywhere.herokuapp.com/";
+header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
+
 // 'https://angular-secondalezione.stackblitz.io');
 
 //header.append('withCredentials', 'true');
