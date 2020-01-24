@@ -23,7 +23,8 @@ console.log(btoa('festigf:AltaFormazione'));
 
 const httpOptions = {
  headers: new HttpHeaders({
-   'Access-Control-Allow-Headers': 'Content-Type',
+   
+   'Access-Control-Allow-Headers': 'Content-Type,authorization',
   'Authorization': 'Basic ' + btoa('festigf:AltaFormazione2020'),
   'Access-Control-Allow-Credentials': "true",
   'Access-Control-Allow-Origin':'http://localhost:4200' 
@@ -59,8 +60,8 @@ header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 /*{headers: header} 
 {headers: header, withCredentials: true}*/
     return this.http
-    //.get('https://festigf.pythonanywhere.com/api/books'); //,httpOptions);/*
-    .get('https://festigf.pythonanywhere.com/api'); 
+    .get('https://festigf.pythonanywhere.com/api/books',httpOptions);/*
+    
    /* .pipe(catchError(err => {
       console.log(err);
       //return this.http
