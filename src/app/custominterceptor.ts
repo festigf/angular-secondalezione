@@ -15,7 +15,7 @@ export class CustomInterceptor implements HttpInterceptor {
                 'Access-Control-Allow-Credentials': 'true',
                 Authorization: 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=',
                 
-                'Access-Control-Allow-Origin': 'http://localhost:4200',
+                'Access-Control-Allow-Origin': '//localhost:4200',
                 'Cache-Control': 'no-cache',
                 'Pragma': 'no-cache',
                 'Expires': 'Sat, 01 Jan 2000 00:00:00 GMT'
