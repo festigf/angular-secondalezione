@@ -12,7 +12,7 @@ export class CustomInterceptor implements HttpInterceptor {
           
             withCredentials: true,
             setHeaders: {
-                'Access-Control-Allow-Headers': '*',
+                'Access-Control-Allow-Headers': 'Authorization',
                 'Access-Control-Allow-Credentials': `true`,
                 Authorization: `Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=`,
                 
