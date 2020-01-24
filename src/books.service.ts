@@ -59,8 +59,8 @@ header.append('Authorization','Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=');
 /*{headers: header} 
 {headers: header, withCredentials: true}*/
     return this.http
-    .get('https://festigf.pythonanywhere.com/api/books',httpOptions);/*
-    .pipe(catchError(err => {
+    .get('https://festigf.pythonanywhere.com/api/books');//,httpOptions);/*
+   /* .pipe(catchError(err => {
       console.log(err);
       //return this.http
         //.get('https://festigf.pythonanywhere.com/books',{headers: header, withCredentials: true})

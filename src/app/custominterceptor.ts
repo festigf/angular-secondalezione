@@ -7,9 +7,21 @@ export class CustomInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         console.log("interceptor")
-      /*  request = request.clone({
-            withCredentials: true
-        });*/
+       const r = request.clone({
+          
+            withCredentials: true,
+            setHeaders: {
+                "Content-Type": 'application/json; charset=utf-8',
+                "Access-Control-Allow-Credentials": 'true',
+                "Authorization": "Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=",
+                "X-Man": "Wolverine" ,
+                'Access-Control-Allow-Origin': 'http://localhost:4200',
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache',
+                'Expires': 'Sat, 01 Jan 2000 00:00:00 GMT'
+              }
+
+        });
 
         return next.handle(request);
     }
