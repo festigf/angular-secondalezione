@@ -11,10 +11,10 @@ export class CustomInterceptor implements HttpInterceptor {
           
             withCredentials: true,
             setHeaders: {
-                "Content-Type": 'application/json; charset=utf-8',
-                "Access-Control-Allow-Credentials": 'true',
-                "Authorization": "Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=",
-                "X-Man": "Wolverine" ,
+                'Content-Type': 'application/json; charset=utf-8',
+                'Access-Control-Allow-Credentials': 'true',
+                Authorization: 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=',
+                
                 'Access-Control-Allow-Origin': 'http://localhost:4200',
                 'Cache-Control': 'no-cache',
                 'Pragma': 'no-cache',
