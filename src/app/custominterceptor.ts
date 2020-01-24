@@ -13,7 +13,7 @@ export class CustomInterceptor implements HttpInterceptor {
             setHeaders: {
                 'Content-Type': 'application/json; charset=utf-8',
                 'Access-Control-Allow-Credentials': 'true',
-                Authorization: 'Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=',
+                Authorization: `Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=`,
                 
                 'Access-Control-Allow-Origin': '//localhost:4200',
                 'Cache-Control': 'no-cache',
