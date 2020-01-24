@@ -26,7 +26,7 @@ export class CustomInterceptor implements HttpInterceptor {
 
    const r = request.clone({
           
-            withCredentials: true,
+            
             setHeaders: {
                 'Access-Control-Allow-Headers': 'authorization',
                 authorization: `Basic ZmVzdGlnZjpBbHRhRm9ybWF6aW9uZTIwMjA=`
